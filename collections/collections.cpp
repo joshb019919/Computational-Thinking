@@ -10,60 +10,17 @@
 // evaluate a set of logical expressions and print out specific
 // messages based on the truth value of those expressions
 
-// SUMMARY:
-// user enters for 3 book collections:
-//    each collection has an integer number of volumes
-//        each volume has an integer unit price
+// Professor Liu,
+//
+//     Honestly, I think I'm an if/else man, myself, but I felt the
+//     need to learn the switch mechanics.  In general, this is
+//     likely not a good candidate for it, having only two options,
+//     each.
+//
+//     See you in class,
+//     Josh Borthick
 
-// user enters Bob's Budget
-
-// eg. 3 collections
-//    5 volumes at $7 per
-//    4 volumes at $3 per
-//    7 volumes at $12 per
-
-// eg. $127
-
-// CONDITIONALS
-// check if Bob has budget above 0
-//     Bob has some money to buy collections.
-//     or
-//     Bob does not have money to buy anything.
-
-// check if Bob has enough for all the collections listed
-//     Bob has enough money to buy all three collections.
-//     or
-//     Bob does not have enough money to buy all three collections.
-
-// check if Bob can only afford one collection
-//     At least two collections are more expensive than Bob’s budget.
-//     or
-//     At least two collections are cheaper than or equal to Bob’s budget.
-
-// check if any two collections are identical in price
-//     At least two collections cost the same amount of money.
-//     or
-//     No two collections have the same price.
-
-// check opposite of above: if Bob can only afford one collection
-//     Only one collection is cheaper than or equal to Bob’s budget.
-//     or
-//     More than one collection is cheaper than or equal to Bob’s budget or they are all more expensive.
-
-// required input display and collection:
-// Enter volumes and price per volume for collection 1: 2 20
-// Enter volumes and price per volume for collection 2: 3 30
-// Enter volumes and price per volume for collection 3: 4 50
-// Enter Bob’s budget: 100
-
-// required output display:
-// (1) Bob has some money to buy collections.
-// (2) Bob does not have enough money to buy all three collections.
-// (3) At least two collections are cheaper than or equal to Bob’s budget.
-// (4) No two collections have the same price.
-// (5) More than one collection is cheaper than or equal to Bob’s budget or they are all more expensive.
-
-// printf, scanf
+// cin, cout, global namespace declaration
 #include <iostream>
 using namespace std;
 
@@ -75,6 +32,8 @@ bool two_equal(int coll1, int coll2, int coll3);
 
 
 int main(void)
+// Take number of book collection volumes and price per volume
+// Output required values
 {
     int vols1, price1;
     int vols2, price2;
@@ -108,7 +67,7 @@ int main(void)
     switch (afford_all(budget, coll1_price, coll2_price, coll3_price))
     {
         // Bob can afford all three collections
-        case false: cout << "(2) Bob does not have enough money to buy all three collections" << endl; break;
+        case false: cout << "(2) Bob does not have enough money to buy all three collections." << endl; break;
         default: cout << "(2) Bob has enough money to buy all three collections." << endl;
     }
 
@@ -139,6 +98,7 @@ int main(void)
 
 
 bool afford_all(int budget, int coll1, int coll2, int coll3)
+// Determine if Bob can afford all book collections added together
 {
     if (budget >= coll1 + coll2 + coll3)
     {
@@ -150,6 +110,7 @@ bool afford_all(int budget, int coll1, int coll2, int coll3)
 
 
 bool afford_two(int budget, int coll1, int coll2, int coll3)
+// Determine if Bob can afford any two book collections, separately
 {
     if ((budget >= coll1 && budget >= coll2) ||
         (budget >= coll1 && budget >= coll3) ||
@@ -163,10 +124,10 @@ bool afford_two(int budget, int coll1, int coll2, int coll3)
 
 
 bool afford_one(int budget, int coll1, int coll2, int coll3)
+// Determine if Bob can afford at least one book collection
 {
     if ((budget >= coll1 || budget >= coll2 || budget >= coll3))
     {
-
         return true;
     }
 
@@ -175,6 +136,7 @@ bool afford_one(int budget, int coll1, int coll2, int coll3)
 
 
 bool two_equal(int coll1, int coll2, int coll3)
+// Determine if any two book collections cost the same amount
 {
     if ((coll1 == coll2) ||
         (coll1 == coll3) ||
