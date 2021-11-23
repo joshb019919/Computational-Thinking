@@ -1,4 +1,3 @@
-// HEADER COMMENTS
 // Ask the user to enter information about three book collections.
 // Each collection has a number of volumes and a price per volume
 // (same for each volume in the collection).
