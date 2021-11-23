@@ -1,3 +1,6 @@
+// C and C++ are normally pass-by-value in functions.  Demonstrate
+// pass-by-reference using pointers and a second function.
+
 #include <stdio.h>
 
 int *pointing(int arr[], int len);

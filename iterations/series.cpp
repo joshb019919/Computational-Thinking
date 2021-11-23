@@ -1,7 +1,6 @@
-// Time your c++ program
-
-// As found in:
-// https://stackoverflow.com/questions/22387586/measuring-execution-time-of-a-function-in-c
+// Take a user-entered integer and loop that many times.  If the loop
+// iterator value, i, is even, subtract its square from a sum total,
+// starting at 0.  If i is odd, add its square to that sum.
 
 #include <iostream>
 #include <cmath>
@@ -17,7 +16,7 @@ int main(void)
 
     for (int i = 1; i <= n; i++)
     {
-        // Mathematical algorithm
+        // Mathematical algorithm (slower, probably because of pow())
         // sum += pow(i, 2) * pow(-1, i + 1);
 
         // Procedural algorithm

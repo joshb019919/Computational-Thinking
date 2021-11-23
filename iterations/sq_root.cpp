@@ -1,4 +1,4 @@
-// Guess the square root of a positive, user-entered number
+// Guess the square root of a positive, user-entered number.
 
 // Idea about using fixed, setw, and setprecision found from
 // users Alnitak and amit kumar:

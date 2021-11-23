@@ -49,10 +49,19 @@ Take the length, width, and height of a rectangular prism and calculate
 the surface area and volume of the prism.  Output the area and volume.
 
 ### Iterations
+Series.cpp: Take a user-entered integer and loop that many times.  If
+the loop iterator value, i, is even, subtract its square from a sum
+total, starting at 0.  If i is odd, add its square to that sum.
+
+Sq_root.cpp: Guess the square root of a positive, user-entered number.
 
 ### Operators
+Ask the user to enter a number of minutes and then display it in the
+format "weeks, days, hours, minutes."
 
 ### Pointers
+C and C++ are normally pass-by-value in functions.  Demonstrate
+pass-by-reference using pointers and a second function.
 
 ### Strings
 Custom implementations of strlen, strcmp, strcat, and strcpy!
