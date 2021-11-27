@@ -1,4 +1,9 @@
-// DYNAMIC MEMORY ALLOCATION HEADER COMMENT
+// Take two user-entered strings and one or both of two flags
+// upon launching the program.  If -i flag is used, weave the two
+// strings together like a zipper.  If -w flag is used, concatenate the
+// two strings together with asterisks between each character.  If both
+// flags are used, do both.  Does not account for each flag supplied in
+// two separate dashes, "-i -w" won't work.
 
 // printf, scanf, malloc, free
 #include <stdio.h>
@@ -8,7 +13,7 @@
 #define MAX_LEN 30
 
 char *intersperse(const char *str1, const char *str2);
-char *widen_stars(char *str1, char *str2);
+char *widen_stars(const char *str1, const char *str2);
 void input(char *str);
 unsigned short str_len(const char *str);
 
@@ -96,7 +101,7 @@ char *intersperse(const char *str1, const char *str2)
     return interspersed_str;
 }
 
-char *widen_stars(char *str1, char *str2)
+char *widen_stars(const char *str1, const char *str2)
 // Allocate memory for a new string on the heap
 // Use a travelling pointer to assign chars to the new string
 // Add str1 to new string, then str2
@@ -113,14 +118,14 @@ char *widen_stars(char *str1, char *str2)
         exit(1);
     }
 
-    // Add widened str1 chars to new string
+    // Add asterisk-widened str1 chars to new string
     while (*str1)
     {
         *trv++ = *str1++;
         *trv++ = '*';
     }
 
-    // Add widened str2 chars to new string
+    // Add asterisk-widened str2 chars to new string
     while (*str2)
     {
         *trv++ = *str2++;
