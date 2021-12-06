@@ -1,0 +1,16 @@
+15
+www.hellotamucc.com    111.115.14.27
+www.hellocosc36.com    168.143.199.41
+www.islanders36.com    242.244.94.55
+www.goislanders.com    28.30.120.51
+www.bluetamucc.edu     210.21.205.183
+www.greentamucc.com    42.186.174.12
+www.cosc1436.com       66.44.172.169
+www.helloblue.com      178.27.160.159
+www.hellogreen.com     242.176.138.168
+www.gotamucc.org       20.208.30.151
+www.codetamucc.org     245.112.154.68
+www.mytamucc.edu       252.218.111.238
+www.theislanduni.com   187.214.135.204
+www.seeutamucc.com     81.185.145.61
+www.byetamucc.com      72.169.132.211
